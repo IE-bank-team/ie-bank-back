@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  iebankback:
+    image: iebankback
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5002:5002
