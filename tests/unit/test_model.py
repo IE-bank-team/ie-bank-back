@@ -1,23 +1,31 @@
 from iebank_api.models import Account
 import pytest
 
-# def test_create_account():
-#     """
-#     GIVEN a Account model
-#     WHEN a new Account is created
-#     THEN check the name, account_number, balance, currency, country, status and created_at fields are defined correctly
-#     """
-#     account = Account('John Doe', 'jujuju', 200, '$', 'papua neuva guinea', '37986437677657530547 77589212239432817621 1000 ,', False)
-#     assert account.name == 'John Doe'
-#     assert account.password == 'jujuju'
-#     assert account.account_number != None
-#     assert account.balance == 200
-#     assert account.currency == '$'
-#     assert account.status == 'Active'
-#     assert account.country == 'Argentina'
-#     assert account.transactions == '37986437677657530547 77589212239432817621 1000 ,'
-#     assert account.main_account == False
- 
+def test_create_account():
+    """
+    GIVEN an Account model
+    WHEN a new Account is created
+    THEN check the name, account_number, balance, currency, country, status, created_at, transactions, and main_account fields are defined correctly
+    """
+
+    name = "Adnan"
+    password = "U2FsdGVkk"  # This should be hashed if your application hashes passwords
+    balance = 5000
+    currency = "€"  # Update this to match the default currency in your model
+    country = "test"
+
+    account = Account(name, password, balance, currency, country, "", True)
+
+    assert account.name == name
+    assert account.password == password  # Update this to match how passwords are stored in your model
+    assert account.account_number is not None
+    assert account.balance == balance
+    assert account.currency == currency
+    assert account.status == "Active"
+    assert account.country == country
+    assert account.transactions == ""  # Update this if you have specific defaults for transactions
+    assert account.main_account is True
+
 # def test_account_deactivate():
 #     """
 #     GIVEN a Account model
