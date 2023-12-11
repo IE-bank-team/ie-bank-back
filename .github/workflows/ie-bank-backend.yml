@@ -14,9 +14,9 @@ permissions:
   id-token: write
 
 env:
-  BACKEND_WEBAPP_DEV: grp1-webApp-dev
-  BACKEND_WEBAPP_UAT: grp1-webApp-uat
-  BACKEND_WEBAPP_PROD: grp1-webApp-prod
+  BACKEND_WEBAPP_DEV: top8i-webApp-dev
+  BACKEND_WEBAPP_UAT: top8i-webApp-uat
+  BACKEND_WEBAPP_PROD: top8i-webApp-prod
   source_branch_name: ${{ github.ref }}
   pr_target_branch_name: ${{ github.base_ref }}
 
