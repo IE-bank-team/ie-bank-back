@@ -31,20 +31,9 @@ jobs:
       - name: "Checkout Github Action"
         uses: actions/checkout@v3
 
-      - name: "Set ENV based on event"
+      - name: "Set ENV variables for dev"
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "ENV=uat" >> $GITHUB_ENV
-          elif [ "${{ github.event_name }}" = "push" ]; then
-            if [ "${{ github.ref_name }}" = "main" ]; then
-              echo "ENV=prod" >> $GITHUB_ENV
-            else
-              echo "ENV=dev" >> $GITHUB_ENV
-            fi
-          fi
-
-      - name: "Set db values"
-        run: |
+          echo "ENV=dev" >> $GITHUB_ENV
           echo "DBHOST=${{ env.DBHOST }}-${{ env.ENV }}.${{ env.DBURL }}" >> $GITHUB_ENV
           echo "DBNAME=${{ env.DBNAME }}-${{ env.ENV }}" >> $GITHUB_ENV
 
