@@ -22,6 +22,7 @@ env:
   DBURL: "postgres.database.azure.com"
   DBNAME: "top8-db"
   DBPASS: "IE.Bank.DB.Admin.Pa$$"
+  ENV: "prod"
 
 jobs:
   build:
