@@ -104,4 +104,4 @@ jobs:
       - uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}-prod
-          images: "${{ env.REGISTRY_LOGIN_SERVER }}prod.azurecr.io/${{ env.IMAGE_NAME }}:prod-latest"
+          images: "${{ env.REGISTRY_LOGIN_SERVER }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.ref_name }}-latest"
