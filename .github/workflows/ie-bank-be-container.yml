@@ -11,8 +11,8 @@ on:
   workflow_dispatch: {}
 
 env:
-  REGISTRY_LOGIN_SERVER: g1acr.azurecr.io
-  KEY_VAULT_NAME: g1kv
+  REGISTRY_LOGIN_SERVER: grp1acr.azurecr.io
+  KEY_VAULT_NAME: grp1kv
   KEY_VAULT_SECRET_NAME_ACR_USERNAME: 'acr-username'
   KEY_VAULT_SECRET_NAME_ACR_PASSWORD: 'acr-password1'
   IMAGE_NAME: ie-bank-be
