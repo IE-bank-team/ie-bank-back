@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from applicationinsights.flask.ext import AppInsights
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 load_dotenv()
 

@@ -17,6 +17,8 @@ env:
   KEY_VAULT_SECRET_NAME_ACR_PASSWORD: 'acr-password1'
   IMAGE_NAME: ie-bank-be
   AZURE_WEBAPP_NAME: software1-be
+  REGISTRY_USERNAME: software1CR
+  REGISTRY_PASSWORD: "Jh42+ZEQjtYWiq9oI7jx0UTSXG6rcbmFsTcuPfaH5E+ACRDijktg"
 
 jobs:
   build:
