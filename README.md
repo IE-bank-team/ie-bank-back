@@ -13,7 +13,6 @@
     - [GitHub secrets](#github-secrets)
   - [Security Badges](#security-badges)
 
-
 ## Overview
 
 This is the repository for the backend code of the IE Bank web app
@@ -23,6 +22,7 @@ This is the repository for the backend code of the IE Bank web app
 ## Requirements
 
 This source code works under the following technologies:
+
 - [Python 3.11.5](https://www.python.org/downloads/release/python-3115/)
 - [Flask 2.2.2](https://pypi.org/project/Flask/2.2.2/)
 - [Flask-Cors 3.0.10](https://pypi.org/project/Flask-Cors/3.0.10/)
@@ -33,6 +33,7 @@ This source code works under the following technologies:
 - [SQL Lite 3.43.0](https://www.sqlite.org/download.html)
 
 ## Recommended tutorials
+
 - [Flask](https://flask.palletsprojects.com/en/2.3.x/tutorial/)
 - [Flask on VS Code](https://code.visualstudio.com/docs/python/tutorial-flask)
 - Linkedin Learning: [Building RESTful APIs with Flask](https://www.linkedin.com/learning/building-restful-apis-with-flask/)
@@ -76,36 +77,33 @@ You now have a self-contained environment ready for writing Flask code. VS Code 
 
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Python: Flask",
-            "type": "python",
-            "request": "launch",
-            "module": "flask",
-            "env": {
-                "FLASK_APP": "app.py",
-                "FLASK_DEBUG": "1",
-                "ENV": "local",
-                "DBUSER":"",
-                "DBPASS":"",
-                "DBHOST":"",
-                "DBNAME":""
-            },
-            "args": [
-                "run",
-                "--no-debugger",
-                "--no-reload"
-            ],
-            "jinja": true,
-            "justMyCode": true
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Flask",
+      "type": "python",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "app.py",
+        "FLASK_DEBUG": "1",
+        "ENV": "local",
+        "DBUSER": "",
+        "DBPASS": "",
+        "DBHOST": "",
+        "DBNAME": ""
+      },
+      "args": ["run", "--no-debugger", "--no-reload"],
+      "jinja": true,
+      "justMyCode": true
+    }
+  ]
 }
 ```
+
 3. **Run and Debug your application locally**. Set a [breakpoint](https://code.visualstudio.com/docs/editor/debugging#_breakpoints) in any of the `.py` files. Go to the Debug view, select the 'Python: Flask' configuration, then press F5 or click the green play button.
 
 ## Configuration variables
@@ -122,7 +120,7 @@ When running the application in VSCode, the `.vscode/launch.json` file well set 
             },
 ```
 
-This python app will read the environment variables in the [`iebank_api\__init__.py`](iebank_api\__init__.py) file. This file will load different variables depending on the value of the `ENV` variable read in the running machine.
+This python app will read the environment variables in the [`iebank_api\__init__.py`](iebank_api__init__.py) file. This file will load different variables depending on the value of the `ENV` variable read in the running machine.
 
 ```python
 # Select environment based on the ENV environment variable
@@ -165,22 +163,21 @@ class DevelopmentConfig(Config):
 ## Continuos Delivery
 
 > Learn more:
+>
 > - [Deploy to App Service using GitHub Actions](https://learn.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=userlevel#python-1)
 > - [Deploying Python to Azure App Service](https://docs.github.com/en/actions/deployment/deploying-to-your-cloud-provider/deploying-to-azure/deploying-python-to-azure-app-service)
 
 The file [`.github/workflows/ie-bank-backend.yml`](.github\workflows\ie-bank-backend.yml) contains the configuration for the CI/CD pipeline
 
-
 ### GitHub secrets
 
 The workflow uses the following GitHub secrets:
 
-Secret name | Description | Learn more
---- | --- | ---
-`AZURE_CREDENTIALS` | Azure credentials to authenticate to Azure via Service Principal | [Use the Azure login action with a service principal secret](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Clinux#use-the-azure-login-action-with-a-service-principal-secret)
+| Secret name         | Description                                                      | Learn more                                                                                                                                                                                                                     |
+| ------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `AZURE_CREDENTIALS` | Azure credentials to authenticate to Azure via Service Principal | [Use the Azure login action with a service principal secret](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Clinux#use-the-azure-login-action-with-a-service-principal-secret) |
 
-
-### SECURITY BADGES  
+### SECURITY BADGES
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/riyadmazari/ie-bank-be/badge)](https://securityscorecards.dev/viewer/?uri=github.com/riyadmazari/ie-bank-be)
 
