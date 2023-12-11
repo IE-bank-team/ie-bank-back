@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from applicationinsights.flask.ext import AppInsights
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 load_dotenv()
 
@@ -40,4 +40,3 @@ if(os.getenv('ENV')== 'dev'):
     def after_request(response):
         appinsghts.flush()
         return response
-

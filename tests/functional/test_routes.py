@@ -45,5 +45,4 @@ def test_dummy_wrong_path():
 #     THEN check the response is valid
 #     """
 #     response = testing_client.get('/accounts/1')
-#     assert response.status_code == 200
-
+#     assert response.status_code == 200

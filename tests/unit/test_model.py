@@ -22,16 +22,16 @@ def test_account_deactivate():
     """
     GIVEN a Account model
     WHEN a new Account is created
-    THEN check the __deactivate__ method is defined correctly
+    THEN check the _deactivate_ method is defined correctly
     """
     account = Account('John Doe', 'jujuju', 200, '$', 'papua neuva guinea', '37986437677657530547 77589212239432817621 1000 ,', False)
-    assert account.__deactivate__() == "Inactive"
+    assert account._deactivate_() == "Inactive"
     
 def test_account_check():
     """
     GIVEN a Account model
     WHEN a new Account is created
-    THEN check the __repr__ method is defined correctly
+    THEN check the _repr_ method is defined correctly
     """
     account = Account('John Doe', 'jujuju', 200, '$', 'papua neuva guinea', '37986437677657530547 77589212239432817621 1000 ,', False)
     assert repr(account) == f"<Event '{(account.account_number)}'>"
@@ -62,4 +62,4 @@ def test_transaction_string_format():
     THEN check the transaction string is formatted correctly
     """
     account = Account('John Doe', 'jujuju', 200, '$', 'papua neuva guinea', '37986437677657530547 77589212239432817621 1000 ,', False)
-    assert account.transactions == '37986437677657530547 77589212239432817621 1000 ,'
+    assert account.transactions == '37986437677657530547 77589212239432817621 1000 ,'

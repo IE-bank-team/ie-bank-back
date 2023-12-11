@@ -107,4 +107,4 @@ def format_account(account):
         'created_at': account.created_at, 
         'transactions': account.transactions,
         'main_account': account.main_account
-    }
+        }

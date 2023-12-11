@@ -15,14 +15,14 @@ class Account(db.Model):
     transactions = db.Column(db.String(1024), nullable=False, default = "")
     main_account = db.Column(db.Boolean, nullable=False, default=False)
 
-    def __repr__(self):
+    def _repr_(self):
         return '<Event %r>' % self.account_number
 
-    def __deactivate__(self):
+    def _deactivate_(self):
         self.status = "Inactive"
         return self.status
 
-    def __init__(self, name, password, currency, balance, country, transactions, main_account):
+    def _init_(self, name, password, currency, balance, country, transactions, main_account):
         self.name = name
         self.password = password
         self.account_number = ''.join(random.choices(string.digits, k=20))
