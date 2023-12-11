@@ -11,15 +11,12 @@ on:
   workflow_dispatch: {}
 
 env:
-  REGISTRY_LOGIN_SERVER: software1acr.azurecr.io
-  KEY_VAULT_NAME: software1kv
+  REGISTRY_LOGIN_SERVER: g1acr.azurecr.io
+  KEY_VAULT_NAME: g1kv
   KEY_VAULT_SECRET_NAME_ACR_USERNAME: 'acr-username'
   KEY_VAULT_SECRET_NAME_ACR_PASSWORD: 'acr-password1'
   IMAGE_NAME: ie-bank-be
-  AZURE_WEBAPP_NAME: software1-be
-  REGISTRY_USERNAME: software1CR
-  REGISTRY_PASSWORD: "Jh42+ZEQjtYWiq9oI7jx0UTSXG6rcbmFsTcuPfaH5E+ACRDijktg"
-
+  AZURE_WEBAPP_NAME: g1-be
 jobs:
   build:
       runs-on: ubuntu-latest
